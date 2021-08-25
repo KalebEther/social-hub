@@ -1,0 +1,40 @@
+
+.nav-container {
+    max-width: 250px;
+    min-width: 250px;
+    height: 100%;
+    align-content: flex-start;
+}
+.nav-profile-picture {
+    width: 32px;
+    height: 32px;
+    background-color: #B0B6BA;
+}
+.nav-menu-scroll {
+    flex-grow:1;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+.nav-menu-scroll::-webkit-scrollbar {
+    display: none;
+}
+.nav-control-panel {
+    font-family: "Source Code Pro";
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+    .nav-container {
+        transform: translateX(-250px);
+        transition: all 0.2s;
+    }
+    .nav-container.active {
+        transform: translateX(0);
+    }
+}
